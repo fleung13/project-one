@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+/* Media query */
+
+@media(max-width: 768px) {
+    
+    .contactus {
+        background: $blue;
+    }
+    
+    .companyDescription {
+        display: none;
+    }
+}
+
+@media(max-width: 320px) {
+    .wrapper nav, .contactus, h3, .moreInfo p {
+        display: none;
+    }
+
+    .form input {
+        width: 20px;
+    }
+}

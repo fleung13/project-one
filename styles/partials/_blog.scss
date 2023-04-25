@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+/* Blog section */
+
+.blog h2, a {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: $darkeyGrey;
+}
+
+.blog ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 19%;
+}
+
+.blog img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog li {
+    flex-basis: 20%;
+}

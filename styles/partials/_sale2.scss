@@ -1,0 +1,70 @@
+@use "./variables" as *;
+
+/* Sale2 section */
+
+.sale2 {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 45px;
+}
+
+.textContainer1 {
+    background-image: url(../assets/vert1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 80vh;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    color: $white;
+}
+
+.textContainer1 p {
+    border: 5px solid $white;
+    background-color: $white;
+    color: $lightBrown;
+    width: 30%;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+}
+
+.textContainer1 span {
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.textContainer1 a {
+    color: $white;
+    font-weight: 700;
+}
+
+.textContainer2 {
+    background-image: url(../assets/vert2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    margin: 20px;
+    text-align: center;
+    padding-top: 60px;
+    color: $white;
+}
+
+.textContainer2 p {
+    border: 1px solid $white;
+    width: 55%;
+    margin: auto;
+    font-size: xx-large;
+    padding: 40px;
+}
+
+.textContainer2 span {
+    font-size: 50px;
+    font-weight: bold;
+}

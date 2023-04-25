@@ -1,0 +1,47 @@
+@use "./variables" as *;
+
+/* Footer */
+
+footer {
+    background-color: $darkeyGrey;
+    color: $white;
+}
+
+.moreInfo {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px;    
+}
+
+/* General code for all the footer icons */
+.moreInfo img {
+    height: 20px;
+    width: 20px;
+}
+
+.companyDescription {
+    margin: 60px 0px;
+    width: 25%;
+    padding: 20px;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    padding:0px 15px;
+    align-items:start;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+input {
+    background-color: $darkeyGrey;
+    color: $white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 240px;
+}

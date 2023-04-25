@@ -1,0 +1,13 @@
+@use "./partials/setup";
+@use "./partials/header";
+@use "./partials/home";
+@use "./partials/area";
+@use "./partials/sale";
+@use "./partials/sale2";
+@use "./partials/blog";
+@use "./partials/footer";
+@use "./partials/homeMediaQuery";
+
+html {
+    font-family: "poppins";
+}

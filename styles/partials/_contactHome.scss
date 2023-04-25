@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+/* Home contact us section */
+
+.contactus h1 {
+    width: 16%;
+    margin-left: 250px;
+    padding-top: 80px;
+}
+
+.contactus {
+    background-image: url(../assets/contact-us.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 27vh;
+}

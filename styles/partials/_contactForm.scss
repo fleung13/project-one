@@ -1,0 +1,12 @@
+@use "./variables" as *;
+
+/* Form section */
+
+.formHome {
+    width: 90px;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 100px;
+}

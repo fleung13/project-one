@@ -1,0 +1,10 @@
+@use "./partials/setup";
+@use "./partials/contactHeader";
+@use "./partials/contactHome";
+@use "./partials/contactForm";
+@use "./partials/contactFooter";
+@use "./partials/contactMediaQuery";
+
+html {
+    font-family: "poppins";
+}

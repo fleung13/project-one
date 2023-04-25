@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+/* Header section */
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+header img {
+    padding: 10px 10px;
+}

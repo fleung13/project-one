@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+/* Area section */
+
+.category ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin:60px auto;
+}
+
+.category li {
+    flex-basis: 31%;
+    margin: 5px;
+}
+
+.category li:nth-child(2) {
+    position: relative;
+    bottom: 25px;
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category span {
+    position: relative;
+    bottom: 30px;
+    background-color: $white;
+    padding: 5px 5px 5px 5px;
+}
