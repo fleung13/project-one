@@ -65,8 +65,30 @@
         </section>
         <section class="sale" id="sale">
                 <h2>Featured sale</h2>
-                <button>Bestsellers</button>
-                <button>category</button>
+                <div class="filterContainer">
+                    <button>Bestseller</button>
+                    <form action="">
+                        <label for="material"></label>
+                        <select name="material" id="filter">
+                            <option value="" selected disabled>Material</option>
+                            <option value="wood">Wood</option>
+                            <option value="porcelain">Porcelain</option>
+                            <option value="cotton">Cotton</option>
+                            <option value="wax">Wax</option>
+                            <option value="glass">Glass</option>
+                        </select>
+                    </form>
+                    <form class="filterButton" action="">
+                        <label for="colour"></label>
+                        <select name="colour" id="filter">
+                            <option value="" selected disabled>Colour</option>
+                            <option value="grey">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="pink">Pink</option>
+                            <option value="white">White</option>
+                        </select>
+                    </form>
+                </div>
                     <ul>
                     <div class="saleItem">
                         <li>
