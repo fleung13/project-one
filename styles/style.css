@@ -169,8 +169,8 @@ header img {
     justify-content: center;
 }
 
-#filter, 
-.filterContainer button { 
+.materialFilter, 
+.colourFilter { 
     border: none;
     background-color: rgb(211, 211, 211);
     padding: 10px;
@@ -180,11 +180,11 @@ header img {
     text-align: center;
 }
 
-.filterContainer button { 
+/* .filterContainer button { 
     background-image: none;
     width: 15vw;
     text-align: center;
-}
+} */
 
 /* Sale2 section */
 
