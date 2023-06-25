@@ -28,29 +28,72 @@ const materialFilter = document.getElementById('materialFilter');
 const colourFilter = document.getElementById('colourFilter');
 const itemContainer = document.getElementById('itemContainer');
 
-materialFilter.addEventListener('change', handleFilterSelection);
-colourFilter.addEventListener('change', handleFilterSelection);
+// onValue(dbRef, (snapshot) => {
+//   if (snapshot.exists()) {
+//     const data = snapshot.val();
+//     console.log(data);
+//   } else {
+//     console.log('No data found in Firebase.');
+//   }
+// });
 
-function handleFilterSelection() {
-    const materialValue = materialFilter.value;
-    const colourValue = colourFilter.value;
-    
-    filterItems(materialValue, colourValue);
-  }
+// materialFilter.addEventListener('change', function(event){ 
+//   console.log('material button clicked')
+//   if(event.target.tagName === 'BUTTON');
   
-  function filterItems(material, colour) {
-    onValue(dbRef, (data) => {
-      const allItems = [];
-      if (data.exists()) {
-        const items = data.items();
-        for (let itemKey in items) {
-          const item = items[itemKey];
-      }
+
+// })
+
+// colourFilter.addEventListener('change', function(event){ 
+//   console.log('colour button clicked')
+//   if(event.target.tagName === 'BUTTON');
+  
+
+// })
+
+const allItems = []; 
+
+const filterData = () => { 
+  onValue(dbRef, (data) => { 
+ 
+  if (data.exists()){ 
+    console.log(data.val());
+
+    const payload = data.val().objects;
+    for (let item in payload){ 
+      allItems.push(payload[objects]);
     }
-    
-    })
+
+     // Filter and display the results
+     const materialValue = materialFilter.value;
+     const colourValue = colourFilter.value;
+
+     const filteredItems = allItems.filter((item) => {
+        if (filterType === 'material') {
+          return item.material === filterValue;
+        } else if (filterType === 'colour') {
+          return item.color === filterValue;
+        }
+        return false;
+     });
+
+     console.log(filteredItems);
+     
+  } 
+});
 }
-  
 
 
+
+materialFilter.addEventListener('change', () => {
+  const materialValue = materialFilter.value;
+  filterData('material', materialValue);
+  console.log(materialValue);
+});
+
+colourFilter.addEventListener('change', () => {
+  const colourValue = colourFilter.value;
+  filterData('colour', colourValue);
+  console.log(colourValue);
+});
 
