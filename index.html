@@ -65,11 +65,10 @@
         </section>
         <section class="sale" id="sale">
                 <h2>Featured sale</h2>
-                <div class="filterContainer">
-                    <!-- <button id = "filter">Bestseller</button> -->
-                    <form action="">
+                <div class="filter">
+                    <form action="" class="filter">
                         <label for="materialFilter"></label>
-                        <select class="materialFilter" name="material" id="materialFilter">
+                        <select class="filter" name="material" id="filter">
                             <option value="" selected disabled>Material</option>
                             <option value="wood">Wood</option>
                             <option value="porcelain">Porcelain</option>
@@ -78,18 +77,22 @@
                             <option value="glass">Glass</option>
                         </select>
                     </form>
-                    <form action="">
-                        <label for="colourFilter"></label>
-                        <select class="colourFilter" name="colour" id="colourFilter">
+                <div class="clearButton">
+                    <button id = "clearButton" class = "filter ">Clear Filter</button>
+                </div>
+                    
+                    <!-- <form action="">
+                        <label for="colorFilter"></label>
+                        <select class="colorFilter" name="color" id="colorFilter">
                             <option value="" selected disabled>Colour</option>
                             <option value="grey">Gray</option>
                             <option value="green">Green</option>
                             <option value="pink">Pink</option>
                             <option value="white">White</option>
                         </select>
-                    </form>
-                </div >
-                    <ul id="itemContainer">
+                    </form> -->
+                </div class = "filterContainer">
+                    <!-- <ul id="itemContainer">
                     <div class="saleItem">
                         <li>
                         <p>sale</p>
@@ -152,8 +155,8 @@
                         <div class="itemPrice">
                         <span>Lorem ipsum<br>$45</span>
                         <button href="#AddingtoShoppingCart"></button>                    
-                        </li>
-                        </div>
+                        </li> 
+                        </div> 
                     </div>    
                     <div class="saleItem"> 
                         <li>
@@ -182,7 +185,7 @@
                         </li>
                         </div>
                     </div>
-                    </ul>
+                    </ul> 
                 <a href="#viewall" id="viewall">View all</a>
         </section>
         <section class="sale2" id="sale2">
@@ -217,7 +220,7 @@
                     <li>
                         <img src="./assets/ig5.jpg" alt="Office chair and table">
                     </li>
-                </ul>
+                </ul> -->
                 </div>
         </section>
     </main>
