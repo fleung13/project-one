@@ -1,22 +1,4 @@
 
-// Filtering Function: 
-//create necessary HTML elements ✅
-//update/add classes to HTML container holding the furniture images✅
-//add CSS styling to the filter buttons✅
-// use query select to gather relevant HTML elements such as filter button and furniture images - save in variable✅
-
-//add an event listener to the container of filters to listen for when a button is pressed {✅
-    //ensure event listener target is a button using event.target === button{
-        //target furniture's various filters and save them in a variable (ex. material, price, product category)
-
-
-// use onValue function to listen to changes in database {
-    // use forEach method to create a function { 
-        //retrieve data from database and store in array
-        //filter array based on filter criteria
-        //display filter data to the page
-
-        //resetting array to go back to original when clear button 
 
 
 
@@ -29,36 +11,79 @@
    } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
     const database = getDatabase(app);
-    const dbRef = ref(database);
+    const dbRef = ref(database, 'items');
 
-    const filterData = () => { 
-      const filterButton = document.querySelector('.filter')
-      filterButton.addEventListener ('change', function(event){ 
-      const chosenMaterial = event.target.value;
-      console.log(chosenMaterial);
-      
-      const furnitureDisplayContainer = document.getElementsByClassName('.productContainer');
-      furnitureDisplayContainer.innerHTML = "";
-      
-
-      onValue(dbRef, (data) => { 
-        const allItems = []; 
-        if (data.exists()){ 
-          // console.log(data.val());
-          const payload = data.val();
-          for (let key in payload){ 
-            const allFurniture = payload[key];
-            const furnitureMaterial = payload[key].material;
-            if (chosenMaterial === furnitureMaterial) { 
-              console.log("${furnitureMaterial} selected");
-            } else { 
-              console.log ('no data found');
-            }
-        }
+    onValue(dbRef, (data) => {
+      const allItems = [];
+    
+      if (data.exists()) {
+        data.forEach((childSnapshot) => {
+          const item = childSnapshot.val();
+          allItems.push(item);
+        });
       }
-  })
-})
-}
+    
+      console.log(allItems);
+      const filterSelect = document.querySelector("#filter");
+      filterSelect.addEventListener("change", () => {
+      const selectedValue = filterSelect.value;
+      console.log("Selected Value:", selectedValue);
 
-  filterData();
+    if (selectedValue === "") {
+      console.log("No data found");
+    } else {
+      const filteredItems = allItems.filter((item) => item.material === selectedValue);
+      console.log("Filtered Items:", filteredItems);
+      // Update the UI with filtered items
+    }
+  });
+});
+
+// Append to Page
+const appendToPage = (furnitureItems) => {
+  const furnitureDisplayContainer = document.querySelector('.productContainer');
+  furnitureDisplayContainer.innerHTML = '';
+
+  furnitureItems.forEach((item) => {
+    const itemName = item.name;
+    const itemPrice = item.price;
+    const itemImage = item.img;
+
+    const itemHTML = `
+      <div>
+        <img src="${itemImage}">
+        <h3>${itemName}</h3>
+        <h2>${itemPrice}</h2>
+        <button class="button">Add To Cart</button>
+      </div>
+    `;
+
+    furnitureDisplayContainer.innerHTML += itemHTML;
+  });
+};
+
+
+// Append to Page: 
+// const appendToPage = (furnitureItems) => {
+//   const furnitureDisplayContainer = document.querySelector('.productContainer');
+//   furnitureDisplayContainer.innerHTML = '';
+  
+//   furnitureItems.forEach((item) => {
+//   const itemName = item.name;
+//   const itemPrice = item.price;
+//   const itemImage = item.img;
+
+//   const itemHTML = `
+//   <div>
+//       <img src="${itemImage}">
+//       <h3>${itemName}</h3>
+//       <h2>${itemPrice}</h2>
+//       <button class="button">Add To Cart</button>
+//   </div>
+//   `
+  
+// })
+// }
+
+
       
