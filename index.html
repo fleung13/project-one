@@ -64,8 +64,10 @@
             </div>
         </section>
         <section class="sale" id="sale">
-                <h2>Featured sale</h2>
-                <div>
+                <h2>Featured Sale</h2>
+                <div class = "filterButtonContainer">
+                    <!-- material filter form -->
+                    <div>
                     <form action="" class="filter">
                         <label for="materialFilter"></label>
                         <select class="filter" name="material" id="filter">
@@ -77,23 +79,16 @@
                             <option value="glass">Glass</option>
                         </select>
                     </form>
-                <div>
+                    </div>
+                    <!-- clear filter button -->
+                    <div>
                     <button id = "clearFilterButton" class = "clearFilterButton" >Clear Filter</button>
+                    </div>
                 </div>
                     
-                    <!-- <form action="">
-                        <label for="colorFilter"></label>
-                        <select class="colorFilter" name="color" id="colorFilter">
-                            <option value="" selected disabled>Colour</option>
-                            <option value="grey">Gray</option>
-                            <option value="green">Green</option>
-                            <option value="pink">Pink</option>
-                            <option value="white">White</option>
-                        </select>
-                    </form> -->
                 <div class = "productContainer">
-                    <!-- <ul id="itemContainer">
-                    <div class="saleItem">
+                    <!--product container for firebase items to append on screen -->
+                    <!-- <div class="saleItem">
                         <li>
                         <p>sale</p>
                         <img src="./assets/prod-1.jpg" alt="An olive green comfortable chair">
@@ -223,7 +218,7 @@
                     </li>
                 </ul>
                 </div>
-        </section>
+        </section> 
     </main>
     <footer>
         <img src="./assets/logo-white.png" alt="White Novas logo">
