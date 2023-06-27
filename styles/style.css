@@ -388,6 +388,48 @@ input {
 }
 
 /* Media query */
+
+@media (max-width: 350px){ 
+    .sale2 { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        margin: 0;
+        width: 100vw;
+    }
+
+    .textContainer1 { 
+        width: 90%;
+    }
+
+    .textContainer2 { 
+        width: 90%;
+    }
+
+    #blog ul { 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #\#moreInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+    .companyDescription, 
+    #contact, 
+    .profile, 
+    .newsletter { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .companyDescription p { 
+        width: 90vw;
+    }
+}
 @media (max-width: 350px) and (min-width: 768px) {
     .itemContainer button { 
         border: none;
@@ -450,6 +492,11 @@ input {
 
     .companyDescription {
         display: none;
+    }
+
+    #moreInfo { 
+        display: flex; 
+        flex-direction: column;
     }
 }
 
