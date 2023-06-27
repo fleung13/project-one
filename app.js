@@ -1,7 +1,4 @@
 
-
-
-
   //firebase configuration 
   import { app } from './firebase.js'
   import { 
@@ -13,47 +10,24 @@
     const database = getDatabase(app);
     const dbRef = ref(database, 'items');
 
-    onValue(dbRef, (data) => {
-      const allItems = [];
-    
-      if (data.exists()) {
-        data.forEach((childSnapshot) => {
-          const item = childSnapshot.val();
-          allItems.push(item);
-        });
-      }
-    
-      console.log(allItems);
-      const filterSelect = document.querySelector("#filter");
-      filterSelect.addEventListener("change", () => {
-      const selectedValue = filterSelect.value;
-      console.log("Selected Value:", selectedValue);
-
-    if (selectedValue === "") {
-      console.log("No data found");
-    } else {
-      const filteredItems = allItems.filter((item) => item.material === selectedValue);
-      console.log("Filtered Items:", filteredItems);
-      // Update the UI with filtered items
-    }
-  });
-});
-
-// Append to Page
+// Append to Page Function 
+//selects the furniture items container and resets inner HTML
 const appendToPage = (furnitureItems) => {
   const furnitureDisplayContainer = document.querySelector('.productContainer');
   furnitureDisplayContainer.innerHTML = '';
 
+  //for each furniture item it saves each items attribute in a variable 
   furnitureItems.forEach((item) => {
     const itemName = item.name;
     const itemPrice = item.price;
     const itemImage = item.img;
 
+    //create HTML elements for data to append to
     const itemHTML = `
-      <div>
-        <img src="${itemImage}">
-        <h3>${itemName}</h3>
-        <h2>${itemPrice}</h2>
+      <div class = "itemContainer">
+        <img class ="itemImg" src="${itemImage}">
+        <h3 class ="itemName">${itemName}</h3>
+        <h2 class ="itemPrice">${itemPrice}</h2>
         <button class="button">Add To Cart</button>
       </div>
     `;
@@ -62,28 +36,43 @@ const appendToPage = (furnitureItems) => {
   });
 };
 
+// Fetch all items 
+onValue(dbRef, (data) => {
+  const allItems = [];
+  //Clear Filter button to append all items when clicked
+  const clearFilterButton = document.querySelector("#clearFilterButton");
+  clearFilterButton.addEventListener('click', () => { 
+    appendToPage(allItems);
+  })
 
-// Append to Page: 
-// const appendToPage = (furnitureItems) => {
-//   const furnitureDisplayContainer = document.querySelector('.productContainer');
-//   furnitureDisplayContainer.innerHTML = '';
+  //checks if data exists in child item
+  if (data.exists()) {
+    data.forEach((childSnapshot) => {
+      const item = childSnapshot.val();
+      allItems.push(item);
+    });
+  }
+
+  // console.log(allItems);
   
-//   furnitureItems.forEach((item) => {
-//   const itemName = item.name;
-//   const itemPrice = item.price;
-//   const itemImage = item.img;
+  // Call appendToPage to display all items on the page before filtering
+  appendToPage(allItems);
 
-//   const itemHTML = `
-//   <div>
-//       <img src="${itemImage}">
-//       <h3>${itemName}</h3>
-//       <h2>${itemPrice}</h2>
-//       <button class="button">Add To Cart</button>
-//   </div>
-//   `
-  
-// })
-// }
+  //targets filter selection and listens for change and gathers selected value
+  const filterSelection = document.querySelector("#filter");
+  filterSelection.addEventListener("change", () => {
+    const selectedValue = filterSelection.value;
+    console.log(selectedValue);
+
+    //if selected value is found in array, append those items to the page
+    if (selectedValue === "") {
+      console.log("No data found");
+    } else {
+      const filteredItems = allItems.filter((item) => item.material === selectedValue);
+      // console.log(filteredItems);
+      appendToPage(filteredItems);
+    }
+  });
+});
 
 
-      
