@@ -25,7 +25,7 @@ const appendToPage = (furnitureItems) => {
     //create HTML elements for data to append to
     const itemHTML = `
       <div class = "itemContainer">
-        <img class ="itemImg" src="${itemImage}">
+        <img class ="itemImage" src="${itemImage}">
         <h3 class ="itemName">${itemName}</h3>
         <h2 class ="itemPrice">${itemPrice}</h2>
         <button class="button">Add To Cart</button>
