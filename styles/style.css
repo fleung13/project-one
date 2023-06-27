@@ -136,14 +136,6 @@ header img {
     font-weight: 500;
 }
 
-.sale button {
-    background: url(../assets/icons/shopping-cart-black-icon.png);
-    height: 35px;
-    width: 35px;
-    background-size: cover;
-    border: 0.5px solid #f7f7f7;
-}
-
 .itemPrice {
     display: flex;
     flex-wrap: flex;
@@ -163,29 +155,70 @@ header img {
     color:#333;
 }
 
-.filterContainer { 
+.sale { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter, 
+.clearFilterButton { 
     display: flex; 
     flex-direction: row; 
-    justify-content: center;
-}
-
-.materialFilter, 
-.colourFilter { 
     border: none;
-    background-color: rgb(211, 211, 211);
-    padding: 10px;
     border-radius: 5%;
-    margin: 20px;
     width: 15vw;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
     text-align: center;
 }
 
-/* .filterContainer button { 
-    background-image: none;
+
+.productContainer { 
+    display: flex;
+    flex-direction: row;
+    margin: 0 10% 0 10%;
+    flex-wrap: wrap;
+}
+
+  .itemContainer{ 
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+  }
+
+  .itemContainer img { 
+    width: 150px; 
+    height: auto; 
+  }
+
+  .itemContainer button { 
+    border: none;
+    border-radius: 5%;
     width: 15vw;
     text-align: center;
-} */
-
+  }
+  .itemImage img  {
+    width: 50px;
+    height: auto;
+  }
+  
+  .itemName {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .itemPrice {
+    font-size: 16px;
+    color: black;
+  }
+  
+  #viewall { 
+    margin-top: 10vh;
+  }
 /* Sale2 section */
 
 .sale2 {
@@ -330,9 +363,6 @@ input {
 
 /* Media query */
 @media(max-width: 768px) {
-    .home {
-        background: #eba6aa;
-    }
 
     .homeText {
         width: 16%;
