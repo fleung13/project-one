@@ -64,9 +64,31 @@
             </div>
         </section>
         <section class="sale" id="sale">
-                <h2>Featured sale</h2>
-                    <ul>
-                    <div class="saleItem">
+                <h2>Featured Sale</h2>
+                <div class = "filterButtonContainer">
+                    <!-- material filter form -->
+                    <div>
+                    <form action="" class="filter">
+                        <label for="materialFilter"></label>
+                        <select class="filter" name="material" id="filter">
+                            <option value="" selected disabled>Material</option>
+                            <option value="wood">Wood</option>
+                            <option value="porcelain">Porcelain</option>
+                            <option value="cotton">Cotton</option>
+                            <option value="wax">Wax</option>
+                            <option value="glass">Glass</option>
+                        </select>
+                    </form>
+                    </div>
+                    <!-- clear filter button -->
+                    <div>
+                    <button id = "clearFilterButton" class = "clearFilterButton" >Clear Filter</button>
+                    </div>
+                </div>
+                    
+                <div class = "productContainer">
+                    <!--product container for firebase items to append on screen -->
+                    <!-- <div class="saleItem">
                         <li>
                         <p>sale</p>
                         <img src="./assets/prod-1.jpg" alt="An olive green comfortable chair">
@@ -128,8 +150,8 @@
                         <div class="itemPrice">
                         <span>Lorem ipsum<br>$45</span>
                         <button href="#AddingtoShoppingCart"></button>                    
-                        </li>
-                        </div>
+                        </li> 
+                        </div> 
                     </div>    
                     <div class="saleItem"> 
                         <li>
@@ -158,7 +180,8 @@
                         </li>
                         </div>
                     </div>
-                    </ul>
+                    </ul>  -->
+                    </div>
                 <a href="#viewall" id="viewall">View all</a>
         </section>
         <section class="sale2" id="sale2">
@@ -195,7 +218,7 @@
                     </li>
                 </ul>
                 </div>
-        </section>
+        </section> 
     </main>
     <footer>
         <img src="./assets/logo-white.png" alt="White Novas logo">
@@ -239,6 +262,9 @@
             </div>
         </div>
     </footer>
+
+    <script type="module" src="app.js"></script>
+   
 </body>
 
 </html>

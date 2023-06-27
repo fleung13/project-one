@@ -1,0 +1,133 @@
+{
+  "items": {
+    "item1": {
+      "alt": "An olive green comfortable chair",
+      "color": "grey",
+      "id": "01",
+      "img": "./assets/prod-1.jpg",
+      "itemType": "chair",
+      "material": "wood",
+      "name": "Malm chair",
+      "new": false,
+      "price": 22,
+      "room": "living room",
+      "sale": true
+    },
+    "item10": {
+      "alt": "Decorative lamp with a plant inside",
+      "color": "none",
+      "id": 10,
+      "img": "./assets/prod-10.jpeg",
+      "itemType": "decoration",
+      "material": "glass",
+      "name": "Nulla lamp",
+      "new": false,
+      "price": 45,
+      "sale": false
+    },
+    "item2": {
+      "alt": "a green pendant table",
+      "color": "green",
+      "id": 2,
+      "img": "./assets/prod-2.jpg",
+      "itemType": "table",
+      "material": "wood",
+      "name": "Pendant table",
+      "new": false,
+      "price": 45,
+      "room": "living room",
+      "sale": false
+    },
+    "item3": {
+      "alt": "Rounded pink salmon coffee table",
+      "color": "pink",
+      "id": 3,
+      "img": "./assets/prod-3.jpg",
+      "itemType": "table",
+      "material": "wood",
+      "name": "magnolia dream",
+      "new": true,
+      "price": 18,
+      "room ": "living room",
+      "sale": false
+    },
+    "item4": {
+      "alt": "A grey comfortable chair",
+      "color": "white",
+      "id": 4,
+      "img": "./assets/prod-4.jpeg",
+      "itemType": "chair",
+      "material": "wood",
+      "name": "Malm chair",
+      "new": false,
+      "price": 45,
+      "room": "bedroom",
+      "sale": false
+    },
+    "item5": {
+      "alt": "A pendant lamp",
+      "color": "grey",
+      "id": 5,
+      "img": "./assets/prod-5.jpeg",
+      "itemType": "lamp",
+      "material": "porcelain",
+      "name": "Pendant lamp",
+      "new": false,
+      "price": 45,
+      "room": "kitchen",
+      "sale": false
+    },
+    "item6": {
+      "alt": "Soft and comfortable pillow with line pattern",
+      "color": "white",
+      "id": 6,
+      "img": "assets/prod-2.jpg",
+      "itemType": "pillow",
+      "material": "cotton",
+      "name": "Pure pillow",
+      "new": false,
+      "price": 45,
+      "room": "living room",
+      "sale": false
+    },
+    "item7": {
+      "alt": "colorful mat with geometrical pattern",
+      "color": "pink",
+      "id": 7,
+      "img": "./assets/prod-7.jpg",
+      "itemType": "carpet",
+      "material": "cotton",
+      "name": "Lorem carpet",
+      "new": false,
+      "price": 45,
+      "room": "dining room",
+      "sale": false
+    },
+    "item8": {
+      "alt": "An elephan shape decoration",
+      "color": "pink",
+      "id": 8,
+      "img": "./assets/prod-8.jpg",
+      "itemType": "decoration",
+      "material": "wood",
+      "name": "Elephant head",
+      "new": false,
+      "price": 45,
+      "room": "living room",
+      "sale": false
+    },
+    "item9": {
+      "alt": "Pink candle with a cross cover",
+      "color": "pink",
+      "id": 9,
+      "img": ".assets/prod-9.jpg",
+      "itemType": "candle",
+      "material": "wax",
+      "name": "Ipsum candle",
+      "new": false,
+      "price": 45,
+      "room": "bedroom",
+      "sale": false
+    }
+  }
+}
